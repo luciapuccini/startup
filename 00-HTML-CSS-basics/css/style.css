@@ -1,38 +1,46 @@
  /*global definition Ex. 2.2.2 */
-body{
+body
+{
   background-color:#333333;
-  font-family: 'Open Sans', sans-serif ;
+  font-family: 'Open Sans', sans-serif;
   font-size: 14px;
 }
-.column-layout{
+
+.column-layout
+{
   max-width: 1300px;
   line-height: 1.65;
   margin-left: 50px;
   display:flex;
-
 }
-div.column-layout{
+
+div.column-layout
+{
   padding-left: 30px;
-
 }
-.main-column{
-flex: 2;
-order: 2;
 
+.main-column
+{
+  flex: 2;
+  order: 2;
 }
-.sidebar1{
-flex: 1;
-order: 1;
 
+.sidebar1
+{
+  flex: 1;
+  order: 1;
 }
-.sidebar2{
-flex: 1;
-order: 3;
 
+.sidebar2
+{
+  flex: 1;
+  order: 3;
 }
-.content {
+
+.content
+{
   background: #808080;
-  font-size: 1.25em;
+  font-size: 14px; /*as asked in Ex. 2.2.3*/
   text-decoration: none;
   padding: 12px 25px 12px 15px;
   color: #fff;
@@ -46,21 +54,22 @@ order: 3;
   width:75%;
   display:block;
   margin-top:18px;
-
 }
 
-
-nav.content{
-  width: 50%;
-  padding-bottom: 300px;
-
-}
-aside.content{
+nav.content
+{
   width: 50%;
   padding-bottom: 300px;
 }
 
-header.content,footer.content {
+aside.content
+{
+  width: 50%;
+  padding-bottom: 300px;
+}
+  /*Ex.2.2.3 */
+header.content,footer.content
+{
   margin: 20px 50px;
   padding: 12px 200px 12px 20px;
   text-align: center;
@@ -70,8 +79,7 @@ header.content,footer.content {
 {
   margin-left: auto;
   margin-right: auto;
-  background: #cccccc;
-  font-size: 0.5em;
+  background: blue; /*asked in 2.3.5*/
   text-decoration: none;
   padding: 6px 12.5px 6px 7.5px;
   color: #fff;
@@ -86,14 +94,46 @@ header.content,footer.content {
   display:block;
   margin-top:9px;
 }
-article.small-content{
+
+article.small-content
+{
   padding-top: 100px;
   padding-bottom: 100px;
 }
-footer.small-content{
-margin-bottom: 50px;
+
+footer.small-content
+{
+  margin-bottom: 50px;
 }
 /* Ex 2.2.1*/
-header.content, footer.content, aside.content ,nav.content{
+header.content, footer.content, aside.content ,nav.content
+{
   background: orange;
+}
+/*Ex2.2.3.3 */
+.header
+{
+  font-size: 46px;
+  background: #FF00FF;
+}
+.footer
+{      /*Not used*/
+  font-size: 14px;
+  background: #FF00FF;
+}
+
+.navigation
+{   /*Not used*/
+  font-size: 12px;
+}
+
+.sidebar
+{      /*Not used*/
+  font-size: 10px;
+  background: #FF00FF;
+}
+
+.header
+{
+  font-size: 14px;
 }
