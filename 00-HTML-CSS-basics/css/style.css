@@ -39,7 +39,7 @@ div.column-layout {
   background: #808080;
   font-size: 14px; /*as asked in Ex. 2.2.3*/
   text-decoration: none;
-  padding: 12px 25px 12px 15px;
+  padding: 12px 25px ;
   color: #fff;
   font-weight: 600;
   border-radius: 5px;
@@ -62,10 +62,10 @@ aside.content {
   width: 50%;
   padding-bottom: 300px;
 }
-  /*Ex.2.2.3 ---> review*/
+
 header.content,footer.content {
   margin: 20px 50px;
-  padding: 12px 200px 12px 20px;
+  padding: 12px 200px ;
   text-align: center;
 }
 
@@ -74,7 +74,7 @@ header.content,footer.content {
   margin-right: auto;
   background: blue; /*asked in 2.3.5*/
   text-decoration: none;
-  padding: 6px 12.5px 6px 7.5px;
+  padding: 6px 12.5px ;
   color: #fff;
   font-weight: 30;
   border-radius: 2.5px;
@@ -96,7 +96,7 @@ article.small-content {
 footer.small-content {
   margin-bottom: 50px;
 }
-/* Ex 2.2.1 --> review*/
+/* Ex 2.2.1 */
 header.content, footer.content, aside.content ,nav.content {
   background: orange;
 }
