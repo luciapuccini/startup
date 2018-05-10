@@ -1,6 +1,8 @@
+ /*global definition Ex. 2.2.2 */
 body{
   background-color:#333333;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Open Sans', sans-serif ;
+  font-size: 14px;
 }
 .column-layout{
   max-width: 1300px;
@@ -31,7 +33,6 @@ order: 3;
 .content {
   background: #808080;
   font-size: 1.25em;
-  text-align: center;
   text-decoration: none;
   padding: 12px 25px 12px 15px;
   color: #fff;
@@ -59,16 +60,11 @@ aside.content{
   padding-bottom: 300px;
 }
 
-header.content {
+header.content,footer.content {
   margin: 20px 50px;
   padding: 12px 200px 12px 20px;
+  text-align: center;
 }
-
-footer.content {
-  margin: 20px 50px;
-  padding: 12px 200px 12px 20px;
-}
-
 
 .small-content
 {
@@ -96,4 +92,8 @@ article.small-content{
 }
 footer.small-content{
 margin-bottom: 50px;
+}
+/* Ex 2.2.1*/
+header.content, footer.content, aside.content ,nav.content{
+  background: orange;
 }
