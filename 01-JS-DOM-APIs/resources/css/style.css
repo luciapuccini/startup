@@ -1,0 +1,15 @@
+section {
+  text-align: center;
+  visibility: hidden;
+}
+
+#slideSource {
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 1s;
+}
+
+#slideSource.fade {
+  opacity: 0;
+
+}
