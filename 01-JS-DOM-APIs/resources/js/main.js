@@ -3,10 +3,17 @@ function callEvents() {
   document.getElementById('handle').onclick = function () {
     slideSource.classList.toggle('fade');
   };
+  // Alert btn
+
 };
 window.onload = function() {
   // i can do this:
   //element.classList.toggle('fade');
   // but for clarity
   callEvents();
+  };
+
+  
+  document.getElementById('alert-btn').onclick =function(){
+    alert('this is an alert! o_o');
   };
