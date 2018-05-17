@@ -10,3 +10,11 @@ section {
 #slideSource.fade {
   opacity: 0;
 }
+.repos {
+
+  float: right;
+}
+.izq {
+  box-sizing: border-box;
+  float: left;
+}
