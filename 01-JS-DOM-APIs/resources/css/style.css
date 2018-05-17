@@ -1,0 +1,20 @@
+section {
+  text-align: center;
+  visibility: hidden;
+}
+#slideSource {
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 1s;
+}
+#slideSource.fade {
+  opacity: 0;
+}
+.repos {
+
+  float: right;
+}
+.izq {
+  box-sizing: border-box;
+  float: left;
+}
