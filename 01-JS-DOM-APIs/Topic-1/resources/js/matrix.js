@@ -1,3 +1,4 @@
+
 document.getElementById('tableBtn').addEventListener('click', generate_tabla);
 function generate_tabla() {
   // get the body id
@@ -15,6 +16,7 @@ function generate_tabla() {
       // and <td> goes to the end
       var cell = document.createElement("td");
       var textcell = document.createTextNode("Row n° " + i + ", Column n°" + j);
+    
       cell.appendChild(textcell);
       row.appendChild(cell);
     }
