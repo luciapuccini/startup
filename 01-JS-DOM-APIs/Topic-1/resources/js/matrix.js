@@ -1,32 +1,30 @@
+function inputTable() {
+  return [
+    ['Kevin Davisson', 'Hanna Sharpton', 'Latashia Schenkel', 'Darla Cook'],
+    ['Benjamin Rico', 'Rosanne Glaze', 'Merle Schlueter', 'Annemarie Truehart'],
+    ['Starr Meadow', 'Monique Scrivens', 'Ward Connor', 'Lee Prieto']
+  ];
+}
 
-document.getElementById('tableBtn').addEventListener('click', generate_tabla);
-function generate_tabla() {
-  // get the body id
-  var body = document.getElementsByTagName("body")[0];
-  // Create <table> and <tbody>
-  var table = document.createElement("table");
-  var tblBody = document.createElement("tbody");
-  // Create cell
-  for (var i = 0; i < 5; i++) {
-    // Create rows
-    var row = document.createElement("tr");
-    for (var j = 0; j < 10; j++) {
-      // Create  <td> and text node,
-      //puts node in <td>,
-      // and <td> goes to the end
-      var cell = document.createElement("td");
-      var textcell = document.createTextNode("Row n° " + i + ", Column n°" + j);
-    
-      cell.appendChild(textcell);
-      row.appendChild(cell);
-    }
-    // add row to the end of table (end of tblbody)
+function generateTable() {
+  let input = inputTable();
+  let table = document.createElement("table");
+  let tblBody = document.createElement("tbody");
+  let row, col;
+  input.map(function(subarray) {
+    row = document.createElement("tr");
+    subarray.map(function(value) {
+      col = document.createElement("td")
+      col.appendChild(document.createTextNode(value));
+      row.appendChild(col);
+    });
     tblBody.appendChild(row);
-  }
-  // puts <tbody> under <table>
+  });
+  // append the <tbody> inside the <table>
   table.appendChild(tblBody);
-  // appends <table> into <body>
-  body.appendChild(table);
-  // changes border;
+  // table border attribute to
   table.setAttribute("border", "2");
+  document.getElementById("table").appendChild(table);
+  // changes border;
+  table.setAttribute("border", "4");
 }
