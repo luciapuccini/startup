@@ -1,8 +1,8 @@
-import EventEmitter from './EventEmitter';
-import Logger from './Logger';
-import Movie from './Movie';
-import Actor from './Actor';
-import Social from './Social';
+import {EventEmitter} from './EventEmitter';
+import {Logger} from './Logger';
+import {Movie} from './Movie';
+import {Actor} from './Actor';
+import {Social} from './Social';
 let mylogger = new Logger;
 let Movie1 = new Movie("Spider Man", "2016", 120);
 let Movie2 = new Movie("Iron Man", "2015", 95);
