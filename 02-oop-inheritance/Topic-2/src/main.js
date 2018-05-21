@@ -1,7 +1,7 @@
-import EventEmitter from './classEventEmitter';
-import Logger from './clasLogger';
-import Movie from './classMovie';
-import Actor from './classActor';
+import EventEmitter from './EventEmitter';
+import Logger from './Logger';
+import Movie from './Movie';
+import Actor from './Actor';
 import Social from './Social';
 let mylogger = new Logger;
 let movie1 = new Movie("Spider Man", "2016", 120);

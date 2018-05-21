@@ -1,6 +1,6 @@
 import {
   EventEmitter
-} from './classEventEmitter';
+} from './EventEmitter';
 class Movie extends EventEmitter {
   constructor(title, year, duration) {
     super();
