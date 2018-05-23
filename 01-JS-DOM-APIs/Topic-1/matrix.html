@@ -3,12 +3,21 @@
 
 <head>
   <meta charset="utf-8">
+  <link rel="stylesheet" href="/css/normalize.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-  <title></title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Table genereator</title>
 </head>
 
 <body>
-  <button class="btn btn-warning" id="tableBtn">Create Table</button>
+  <div id="div-section">
+    <table id="table">
+      <th><h2>Generate Table</h2></th>
+    </table>
+  </div>
+  <button class="btn btn-warning" id="tableBtn" onclick="generateTable()">Create Table</button>
+
   <script src="resources/js/matrix.js">
   </script>
 </body>

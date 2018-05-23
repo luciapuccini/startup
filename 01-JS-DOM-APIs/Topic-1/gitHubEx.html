@@ -1,0 +1,38 @@
+<!---Create a reusable function to perform AJAX calls.
+ This function must accept a config object and return an ES6 Promise.--->
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="resources/css/style.css">
+  <title>Ex 4 JavaScript</title>
+</head>
+
+<body>
+  <button class="btn bt-primary m-2" id="getRepos">Get repositories</button>
+  <div>
+
+    <label for=searchField> Search in repositories </label><br>
+    <input type="text" id="searchField" placeholder="Repository">
+    <button class="btn btn-primary" id="search" value="Submit" onclick="gitSearch()">Search</button>
+
+  </div>
+  <div id="result">
+  </div>
+  <div class="repos" id="repos">
+    <h2>Repositories list</h2>
+
+  </div>
+
+  <div class="" id="repoSearch">
+    <h2>Repositories Found</h2>
+    <ul id="list"></ul>
+  </div>
+  <script src="resources/js/ex3.js">
+  </script>
+</body>
+
+</html>
