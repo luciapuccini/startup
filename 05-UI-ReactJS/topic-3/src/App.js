@@ -6,11 +6,12 @@ import AddMovie from './components/AddMovie';
 import './App.css';
 
 class App extends React.Component {
-  constructor() {//defining initial keys
-    super();
+  constructor(props) {//defining initial keys
+    super(props);
     this.state = {
       movies: []
     };
+    this.handleAddMovie = this.handleAddMovie.bind(this);
   }
 //lifecicle method : triggerd when componenet re-render here comes ajax methods
   componentWillMount() {
@@ -35,18 +36,21 @@ class App extends React.Component {
       },
     ]});
   }
-  handleAddMovie(movie){
-    //data will not persist
-    let movies =this.state.movies;
-    movies.push(movie);
-    this.setState({movies:movies});
+  handleAddMovie(m){
+
+    const newMovies =this.state.movies.slice();
+    newMovies.push(m);
+    this.setState({movies:newMovies});
   }
 
   render() { //note: always return ONE element
     return (
-      <div className="App">
-        <AddMovie AddMovie= {this.handleAddMovie.bind(this)}/>
+      <div className="content">
+        <AddMovie AddMovie= {this.handleAddMovie}/>
+        <br/>
+        <h2>Movie List</h2> <hr/>
         <Movies movies={this.state.movies}/>
+
       </div>
     );
   }
