@@ -46,7 +46,7 @@ class App extends React.Component {
   render() { //note: always return ONE element
     return (
       <div className="App">
-        <AddMovie AddMovie= {this.handleAddMovie}/>
+        <AddMovie addMovie= {this.handleAddMovie}/>
         <Movies movies={this.state.movies}/>
       </div>
     );

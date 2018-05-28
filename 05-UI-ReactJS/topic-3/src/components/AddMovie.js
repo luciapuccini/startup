@@ -27,7 +27,7 @@ class AddMovie extends React.Component {
         title:this.state.title,
         category:this.state.category
       }, function () {
-        this.props.AddMovie(this.state);
+        this.props.addMovie(this.state);
       });
       alert('title submitted:' + this.state.title)
     }
@@ -82,6 +82,6 @@ class AddMovie extends React.Component {
 }//End Component
 AddMovie.propTypes = {
   categories: PropTypes.array,
-  AddMovie: PropTypes.func
+  addMovie: PropTypes.func
 }
 export default AddMovie;
