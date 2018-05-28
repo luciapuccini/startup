@@ -6,60 +6,48 @@ class AddMovie extends React.Component {
   constructor() {
     super();
     this.state = { //each component has his own state, so to save i send it to the app state
-      newMovie:{
+
         title:'',
         category:''
-      }
+
     }
     this.handleSubmit = this.handleSubmit.bind(this);
-    this.handleChange = this.handleChange.bind(this);
+    this.handleChangeCategory = this.handleChangeCategory.bind(this);
+    this.handleChangeTitle = this.handleChangeTitle.bind(this);
   }//end Constructor
   static defaultProps = {
     categories: ['fiction','comedy','drama']
   }
   handleSubmit(event) {
-    if(this.state.newMovie.title === '')
+    if(this.state.title === '')
     {
       alert('Title required');
     }else {
-      this.setState({newMovie:{
-        title:this.state.newMovie.title,
-        category:this.state.newMovie.category
-      }}, function () {
-        this.props.AddMovie(this.state.newMovie);
+      this.setState({
+        title:this.state.title,
+        category:this.state.category
+      }, function () {
+        this.props.AddMovie(this.state);
       });
-      alert('title submitted:' + this.state.newMovie.title)
+      alert('title submitted:' + this.state.title)
     }
 
     event.preventDefault();
     }//End handleSubmit
 
 
-
-  handleChange(event) { //can't make it work right
+  handleChangeCategory(event) {
     const target = event.target;
-    this.setState({newMovie:{
-      [target.name]: target.value }});
-    /*let newtitle='';
-    var newcat='';
-    if(target.name === 'title')
-    {
-      newtitle =  target.value;
-      this.setState({
-        newMovie:{
-          title: target.value}
-        });
-    }else{
-      newcat = target.value;
-      this.setState({
-        newMovie:{
-          category: target.value}
-        });
-    }**/
-
-    console.log('nurevo estado:',this.state.newMovie);
+    this.setState({category:target.value});
+    console.log('nurevo cate:',this.state);
     event.preventDefault();
-  }//end handleChange
+  }//end handleChangeCategory
+  handleChangeTitle(event) {
+    const target = event.target;
+    this.setState({title:target.value});
+    console.log('nurevo title:',this.state);
+    event.preventDefault();
+  }//end handleChangeTitle
   componentWillMount(){
     console.log('render');
   }
@@ -74,12 +62,12 @@ class AddMovie extends React.Component {
         <form onSubmit={this.handleSubmit}>
           <div>
             <label>Title </label><br/>
-            <input type="text" name="title" value={this.state.title} onChange={this.handleChange}/>
+            <input type="text" name="title" value={this.state.title} onChange={this.handleChangeTitle}/>
           </div>
           <br/>
           <div>
             <label>Category</label><br/>
-            <select name="category" value={this.state.category} onChange={this.handleChange}>
+            <select name="category" value={this.state.category} onChange={this.handleChangeCategory}>
             {categoryOptions}
             </ select>
             <br/>

@@ -1,9 +1,9 @@
 import React from 'react';
 import Movies from './components/Movies';
 import AddMovie from './components/AddMovie';
-//import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 
-import './App.css';
+
 
 class App extends React.Component {
   constructor(props) {//defining initial keys
@@ -11,7 +11,7 @@ class App extends React.Component {
     this.state = {
       movies: []
     };
-    this.handleAddMovie = this.handleAddMovie.bind(this);
+    this.handleAddMovie= this.handleAddMovie.bind(this);
   }
 //lifecicle method : triggerd when componenet re-render here comes ajax methods
   componentWillMount() {
@@ -36,21 +36,18 @@ class App extends React.Component {
       },
     ]});
   }
-  handleAddMovie(m){
+  handleAddMovie(movie){
 
-    const newMovies =this.state.movies.slice();
-    newMovies.push(m);
-    this.setState({movies:newMovies});
-  }
+      const newMovies =this.state.movies.slice();
+      newMovies.push(movie);
+      this.setState({movies:newMovies});
+    }
 
   render() { //note: always return ONE element
     return (
-      <div className="content">
+      <div className="App">
         <AddMovie AddMovie= {this.handleAddMovie}/>
-        <br/>
-        <h2>Movie List</h2> <hr/>
         <Movies movies={this.state.movies}/>
-
       </div>
     );
   }

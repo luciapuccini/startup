@@ -5,21 +5,12 @@ import PropTypes from 'prop-types';
 
 
 class Movies extends React.Component {
-  constructor (props) {
-    super(props);
-    this.state = {movie:
-      { title:'none',
-      category:'',
-      year:''
-      }
-    }
 
-  }
   render() { //note: always return ONE element
     let movieItem;
     if (this.props.movies){
       movieItem = this.props.movies.map (movie => {
-
+      //  console.log(movie);
       return(
         <MovieItem  key = {movie.title} movie = {movie} />
       );
@@ -29,6 +20,7 @@ class Movies extends React.Component {
     return (
       <div className="Movies">
         {movieItem}
+
       </div>
     );
   }
