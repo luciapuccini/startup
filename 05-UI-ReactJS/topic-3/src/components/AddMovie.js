@@ -2,9 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 
+
 class AddMovie extends React.Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = { //each component has his own state, so to save i send it to the app state
 
         title:'',
@@ -39,7 +40,7 @@ class AddMovie extends React.Component {
   handleChangeCategory(event) {
     const target = event.target;
     this.setState({category:target.value});
-    console.log('nurevo cate:',this.state);
+    console.log('nurevo cate:',this.state);2
     event.preventDefault();
   }//end handleChangeCategory
   handleChangeTitle(event) {
@@ -84,4 +85,5 @@ AddMovie.propTypes = {
   categories: PropTypes.array,
   addMovie: PropTypes.func
 }
+
 export default AddMovie;
