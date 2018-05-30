@@ -6,7 +6,7 @@ import {connect} from 'react-redux';
 import {fetchData} from '../actions/MovieActions';
 
 class Movies extends React.Component {
-  ComponentWillMount(){
+  componentWillMount(){
     this.props.fetchData();
   }
   render() {

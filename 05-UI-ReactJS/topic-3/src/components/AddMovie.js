@@ -1,8 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-
-
 class AddMovie extends React.Component {
   constructor(props) {
     super(props);
@@ -10,7 +8,6 @@ class AddMovie extends React.Component {
 
         title:'',
         category:''
-
     }
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleChangeCategory = this.handleChangeCategory.bind(this);
@@ -40,17 +37,14 @@ class AddMovie extends React.Component {
   handleChangeCategory(event) {
     const target = event.target;
     this.setState({category:target.value});
-    console.log('nurevo cate:',this.state);2
     event.preventDefault();
   }//end handleChangeCategory
   handleChangeTitle(event) {
     const target = event.target;
     this.setState({title:target.value});
-    console.log('nurevo title:',this.state);
     event.preventDefault();
   }//end handleChangeTitle
   componentWillMount(){
-    console.log('render');
   }
   render() {
     let categoryOptions = this.props.categories.map(category => {
