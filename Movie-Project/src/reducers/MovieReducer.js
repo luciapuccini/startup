@@ -1,8 +1,8 @@
-import {FETCH_DATA,NEW_MOVIE} from '../actions/types';
-
-const initialState = { //son las props globales
-  movies: [],
-  movie: {}
+import {FETCH_DATA, MOVIE_DETAILS, GET_MOVIES} from '../actions/types';
+//ojo aca recivo de la api un obj
+const initialState = {
+  movies: [], 
+  movie: {},
 }
 export default function (state = initialState, action) {
   switch (action.type) {
@@ -12,7 +12,13 @@ export default function (state = initialState, action) {
         ...state,
         movies: action.payload
       }
-    case NEW_MOVIE:
+    case GET_MOVIES:
+      console.log('dispatch action GET MOVIES');
+      return{
+        ...state,
+        movieSearch: action.payload.Search
+      }
+    case MOVIE_DETAILS:
       console.log('dispatch action new movie');
       return {
         ...state,

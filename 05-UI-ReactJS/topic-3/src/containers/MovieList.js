@@ -33,12 +33,12 @@ class MovieList extends Component {
 MovieList.propTypes = {
   fetchMovies: PropTypes.func.isRequired,
   movies: PropTypes.array.isRequired,
-  newMovie: PropTypes.object
+
 };
 
 const mapStateToProps = state => ({
   movies: state.movies.movies,
-  newMovie: state.movies.movie
+
 });
 
 export default connect(mapStateToProps, { fetchMovies })(MovieList);

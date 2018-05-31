@@ -3,8 +3,8 @@
 // the other returns an object instead of an array
 import { FETCH_DATA, NEW_MOVIE } from './types';
 
-export const fetchMovies = () => dispatch => {
-  fetch('http://tv-v2.api-fetch.website/movies/10?sort=last%20added&order=1&genre=drama')
+export const fetchMovies = (searchText) => dispatch => {
+  fetch('http://www.omdbapi.com/?s='+searchText+'&apikey=85235fe7')
     .then(res => res.json())
     .then(movies =>
       dispatch({
