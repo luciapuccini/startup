@@ -1,4 +1,3 @@
-//SearchMovie
 import React, {Component} from 'react'; 
 import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
@@ -17,20 +16,17 @@ class SearchMovie extends Component {
     this.onSubmit = this.onSubmit.bind(this);
   }
   
-
   onChange(e) {
     this.setState({ searchText: e.target.value }); 
     e.preventDefault();
   }
     
-
   onSubmit(e) {
     e.preventDefault();
     let searchText = this.state.searchText
     this.setState({
       [e.movieSearch]: this.props.getMovies(searchText)
     });
-    
     
   }
 
@@ -65,12 +61,11 @@ class SearchMovie extends Component {
             </form>
             <hr/>
             <div>
-              <h2>Busqueda</h2>
+              <h2>Search</h2>
              {movieItems}
             </div>
           </div>
         </div>
-        
         </div>
 
     );

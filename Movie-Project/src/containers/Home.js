@@ -3,19 +3,14 @@ import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
 import {fetchMovies} from '../actions/MovieActions'
 
-
 class Home extends Component {
   componentWillMount() {
     this.props.fetchMovies();
   }
 
-  
-
   render() {
     const movieItems = this.props.movies.map(movie => (
       
-      
-        
           <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
           <div class="carousel-inner">
             <div class="carousel-item active">
@@ -43,8 +38,6 @@ class Home extends Component {
       <div>
         <h1>Movies</h1>
         {movieItems}
-        
-        
         </div>
     );
   }

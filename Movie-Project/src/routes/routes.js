@@ -6,11 +6,9 @@ import { Route, Switch } from 'react-router-dom';
 import App from '../components/App';
 import Page404 from '../components/Page404';
 import LogIn from '../components/LogIn';
-// Container
 import Home from '../containers/Home'
 import FindUs from '../components/FindUs';
 import SearchMovie from '../containers/SearchMovie';
-
 
 const AppRoutes = () =>
   <App>

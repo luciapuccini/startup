@@ -1,5 +1,4 @@
 import {FETCH_DATA, MOVIE_DETAILS, GET_MOVIES} from '../actions/types';
-//ojo aca recivo de la api un obj
 const initialState = {
   movies: [], 
   movie: {},

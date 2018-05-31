@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 
 export default class GoogleMap extends Component {
-  shouldComponentUpdate() {
-    // component will never update
+  shouldComponentUpdate() {           
     return false;
   }
 
