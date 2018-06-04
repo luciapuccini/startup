@@ -15,10 +15,10 @@ export default function (state = initialState, action) {
       console.log('dispatch action GET MOVIES');
       return{
         ...state,
-        movieSearch: action.payload.Search
+        movies: action.payload
       }
     case MOVIE_DETAILS:
-      console.log('dispatch action new movie');
+      console.log('dispatch action get movie');
       return {
         ...state,
         movie: action.payload

@@ -18,7 +18,7 @@ export default class LogIn extends Component {
         <form >
             <div className="col-4 ">
                 <label for="inputUsu" className="sr-only">Email</label>
-                <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required="" autofocus=""/>
+                <input type="email" id="inputEmail" className="form-control" placeholder="Email address" required="" autofocus=""/>
                 <label for="inputPassword" className="sr-only">password</label>
                 <input type="password" id="inputPassword" name="inputPassword" className="form-control" placeholder="Password" required/>
 

@@ -12,27 +12,25 @@ export const fetchMovies = () => dispatch => {
 };
 
 export const getMovies = (searchText) => dispatch => {
-    
   try {
     fetch('http://www.omdbapi.com/?s='+searchText+'&apikey=85235fe7')
     .then(res =>   res.json()  ) 
     .then(movies =>
     dispatch({
       type: GET_MOVIES,
-      payload: movies
+      payload: movies.Search //need this to get an array from the api
     })
   );
     
   } catch (error) {
-    console.log(error);
+    console.log("action error:"+error);
   }
   
  
 };
    
-
 export const getMovie = (id) => dispatch => {
-        fetch('http://www.omdbapi.com/?s='+id+'&apikey=85235fe7')
+        fetch('http://www.omdbapi.com/?i='+id+'&apikey=85235fe7')
         .then( res => res.json() )
         .then(movie =>
         dispatch({

@@ -9,13 +9,14 @@ class Home extends Component {
   constructor(props){
     super(props);
     this.state = {
-      pics : []
+      
     };
   }
   componentWillMount() {
     this.props.fetchMovies();
     
   }
+  
     render() {  
       const movieItems =
       <Carousel>

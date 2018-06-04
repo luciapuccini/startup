@@ -9,6 +9,7 @@ import LogIn from '../components/LogIn';
 import Home from '../containers/Home'
 import FindUs from '../components/FindUs';
 import SearchMovie from '../containers/SearchMovie';
+import MovieDetails from '../containers/MovieDetails';
 
 const AppRoutes = () =>
   <App>
@@ -17,6 +18,7 @@ const AppRoutes = () =>
       <Route exact path="/findUs" component={FindUs} />
       <Route exact path="/logIn" component={LogIn} />
       <Route exact path="/search" component={SearchMovie} />
+      <Route exact path="/movieDetails" component={MovieDetails}/>
       <Route component={Page404} />
     </Switch>
   </App>;

@@ -8,6 +8,10 @@ export default [
     url: '/search'
   },
   {
+    title: 'Movie Details',
+    url: '/movieDetails'
+  },
+  {
     title: 'Log in',
     url: '/logIn'
   },
