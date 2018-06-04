@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import './css/Content.css';
+import '../../utils/css/style.css';
 
 class Content extends Component {
   static propTypes = {

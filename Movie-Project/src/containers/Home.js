@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
 import {fetchMovies} from '../actions/MovieActions';
 import {Carousel} from 'react-bootstrap';
-import './css/Home.css';
+import '../utils/css/style.css';
 
 class Home extends Component {
   constructor(props){
@@ -24,7 +24,7 @@ class Home extends Component {
        {this.props.movies.map( movie => (
          <Carousel.Item>
          <div key={movie.id}>
-            <img width={900} height={500} alt="900x500" src={movie.images.fanart} />
+            <img className="img-responsive"  alt="900x500" src={movie.images.fanart} />
             <Carousel.Caption>
               <h3>{movie.title}</h3>
               </Carousel.Caption>

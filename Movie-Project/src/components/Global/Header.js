@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
-import './css/Header.css';
+import '../../utils/css/style.css';
 
 class Header extends Component {
   static propTypes = {
