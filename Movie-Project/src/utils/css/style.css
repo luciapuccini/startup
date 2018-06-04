@@ -1,0 +1,5 @@
+.right-div {
+    box-sizing: border-box;
+    align-items: flex-end;
+    -webkit-align-items: flex-end;
+}

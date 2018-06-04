@@ -1,22 +1,22 @@
 import React, { Component } from 'react';
-import {connect} from 'react-redux';
+import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 
 class MovieDetails extends Component {
-    constructor(props){
-        super(props);
-        this.state={
-            movie:this.props.movie
-        }
+  constructor(props) {
+    super(props);
+    this.state = {
+      movie: this.props.movie
     }
-    
+  }
+
   render() {
-      const movie = this.props.movie
+    const movie = this.props.movie
     return (
       <div>
-          <div className="row">
+        <div className="row">
           <div className="col-md-4">
-            <img src={movie.Poster} className="thumbnail"/>
+            <img src={movie.Poster} className="thumbnail" />
           </div>
           <div className="col-md-8">
             <h2>{movie.Title}</h2>
@@ -35,17 +35,17 @@ class MovieDetails extends Component {
           <div className="well">
             <h3>Plot</h3>
             {movie.Plot}
-            <hr/>
-            
+            <hr />
+
           </div>
         </div>
       </div>
-      
+
     )
   }
 }
 MovieDetails.propTypes = {
-movie: PropTypes.object.isRequired
+  movie: PropTypes.object.isRequired
 };
-  
-  export default connect(null, {  })(MovieDetails);
+
+export default connect(null, {})(MovieDetails);
