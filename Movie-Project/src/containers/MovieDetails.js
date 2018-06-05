@@ -1,26 +1,29 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
+import '../utils/css/style.css';
 
 class MovieDetails extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      movie: this.props.movie
+     details:{}
     }
   }
 
   render() {
-    const movie = this.props.movie
+    console.log("las props en details: "+this.props.details);
+    
+    const movie = this.props.details
     return (
       <div>
         <div className="row">
           <div className="col-md-4">
-            <img src={movie.Poster} className="thumbnail" />
+            <img className="thumbnail" src={movie.Poster} alt="movie poster"  />
           </div>
-          <div className="col-md-8">
+          <div className="col-md-6">
             <h2>{movie.Title}</h2>
-            <ul className="list-group">
+            <ul className="list-group ">
               <li className="list-group-item"><strong>Genre:</strong> {movie.Genre}</li>
               <li className="list-group-item"><strong>Released:</strong> {movie.Released}</li>
               <li className="list-group-item"><strong>Rated:</strong> {movie.Rated}</li>
@@ -47,5 +50,8 @@ class MovieDetails extends Component {
 MovieDetails.propTypes = {
   movie: PropTypes.object.isRequired
 };
+const mapStateToProps = state => ({
+  details: state.movies.movie,
+});
 
-export default connect(null, {})(MovieDetails);
+export default connect(mapStateToProps, )(MovieDetails);

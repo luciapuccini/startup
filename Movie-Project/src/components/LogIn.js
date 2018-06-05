@@ -28,7 +28,7 @@ export default class LogIn extends Component {
    onClick (event) {
      event.preventDefault(); 
     let currentDiv = document.getElementById('welcome');
-    if(this.state.user != '' && this.state.password != '') {   
+    if(this.state.user !== '' && this.state.password !== '') {   
       currentDiv.innerHTML ='<h2> Welcome: '+this.state.user +'</h2>'
     }else{
       window.alert('Please fill all fields')

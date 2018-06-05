@@ -8,7 +8,7 @@ export default [
     url: '/search'
   },
   {
-    title: 'Movie Details',
+    title: '',
     url: '/movieDetails'
   },
   {

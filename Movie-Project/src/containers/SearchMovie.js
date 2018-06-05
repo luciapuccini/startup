@@ -2,8 +2,7 @@ import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
 import {getMovies, getMovie} from '../actions/MovieActions';
-import MovieDetails from './MovieDetails';
-import {Link} from 'react-router-dom';
+
 import {withRouter} from "react-router-dom";
 
 
@@ -12,7 +11,6 @@ class SearchMovie extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      
       movieSearch: [],
       movieIdSearch:{}
     };
@@ -40,8 +38,8 @@ class SearchMovie extends Component {
     this.setState({
       [event.movieIdSearch]: this.props.getMovie(searchId)
     })
-    console.log("traje:"+this.state.movieIdSearch);
-    this.props.history.push('/movieDetails');
+    this.props.history.push("/movieDetails");
+    
     };
 
    
@@ -86,9 +84,6 @@ class SearchMovie extends Component {
                   <h2>Search</h2>
                     
                       {movieItems}
-                    
-                      
-                   
                   
                 </div>
               </div>
@@ -100,9 +95,6 @@ class SearchMovie extends Component {
     
 };
 
- 
-
-  
 
 SearchMovie.propTypes = {
   getMovies: PropTypes.func.isRequired,
@@ -112,6 +104,6 @@ SearchMovie.propTypes = {
 
 const mapStateToProps = state => ({
   movies: state.movies.movies,
-  movie: state.movieIdSearch
+  
 });
 export default withRouter (connect(mapStateToProps, { getMovies,getMovie })(SearchMovie));

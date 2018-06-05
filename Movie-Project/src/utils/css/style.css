@@ -5,6 +5,12 @@
     position: absolute;
 }
 
+.col-md-6 {
+    float:right;
+}
+.col-md-4 {
+    float:left;
+}
 
 .right-div {
     box-sizing: border-box;

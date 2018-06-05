@@ -24,7 +24,7 @@ class Home extends Component {
        {this.props.movies.map( movie => (
          <Carousel.Item>
          <div key={movie.id}>
-            <img className="img-responsive"  alt="900x500" src={movie.images.fanart} />
+            <img className="img-responsive"  alt="active movie" src={movie.images.fanart} />
             <Carousel.Caption>
               <h3>{movie.title}</h3>
               </Carousel.Caption>
