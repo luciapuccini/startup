@@ -12,7 +12,6 @@ class MovieDetails extends Component {
   }
 
   render() {
-    console.log("las props en details: "+this.props.details);
     
     const movie = this.props.details
     return (
@@ -39,7 +38,6 @@ class MovieDetails extends Component {
             <h3>Plot</h3>
             {movie.Plot}
             <hr />
-
           </div>
         </div>
       </div>
@@ -54,4 +52,4 @@ const mapStateToProps = state => ({
   details: state.movies.movie,
 });
 
-export default connect(mapStateToProps, )(MovieDetails);
+export default connect(mapStateToProps,)(MovieDetails);

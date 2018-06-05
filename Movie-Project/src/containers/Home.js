@@ -5,17 +5,13 @@ import {fetchMovies} from '../actions/MovieActions';
 import {Carousel} from 'react-bootstrap';
 import '../utils/css/style.css';
 
+
 class Home extends Component {
-  constructor(props){
-    super(props);
-    this.state = {
-      
-    };
-  }
+  
   componentWillMount() {
     this.props.fetchMovies();
-    
   }
+    
   
     render() {  
       const movieItems =
@@ -55,5 +51,7 @@ const mapStateToProps = state => ({
   movies: state.movies.movies,
  
 });
+
+
 
 export default connect(mapStateToProps, { fetchMovies })(Home);

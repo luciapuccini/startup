@@ -43,9 +43,9 @@ export default class LogIn extends Component {
         <div className="form-singin ">
         <form >
           <div className="col-xs-4 ">
-            <label for="inputUsu" className="sr-only">Username</label>
+            <label  className="sr-only">Username</label>
             <input type="text" id="inputUser" className="form-control" placeholder="Username"  onChange={this.onUserChange} value={this.state.user} required />
-            <label for="inputPassword" className="sr-only">password</label>
+            <label  className="sr-only">password</label>
             <input type="password" id="inputPassword" name="inputPassword" className="form-control" placeholder="Password" onChange={this.onPasswordChange} value={this.state.password} required/>
             <div className="checkbox mb-3">
               <label>
