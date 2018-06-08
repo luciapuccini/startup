@@ -14,17 +14,15 @@ class Header extends Component {
 
     return (
       <div className="Header">
-        <div >
+        <div>
           <h2>{title}</h2>
-          <ul className="Menu">
-            {
+          <ul className="Menu"> {
               items && items.map(
                 (item, key) => <li key={key}><Link to={item.url}>{item.title}</Link></li>
               )
             }
           </ul>
         </div>
-       
       </div>
     );
   }

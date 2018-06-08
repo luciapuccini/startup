@@ -4,12 +4,11 @@ class Page404 extends Component {
   render() {
     return (
       <div>
-        <h1>Page404</h1>
-        <p>
-          <Link to={'/'}>
-          Get Back
-          </Link>
-        </p>
+            <h1>Page404</h1>
+            <p>
+                  <Link to={'/'}> Get Back
+                  </Link>
+            </p>
       </div>
     );
   }

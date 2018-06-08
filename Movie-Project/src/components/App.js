@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import items from '../data/menu';
-// Components
 import Header from './Global/Header';
 import Content from './Global/Content';
 import Footer from './Global/Footer';

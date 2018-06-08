@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import '../../utils/css/style.css';
 
@@ -8,10 +8,9 @@ class Content extends Component {
   };
 
   render() {
-    const { body } = this.props;
-
+    const {body} = this.props;
     return (
-      <div className="Content">
+      <div className = "Content">
         {body}
       </div>
     );

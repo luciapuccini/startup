@@ -1,6 +1,5 @@
 
 import React, { Component } from 'react';
-
 import GoogleMap from './Map';
 
 class FindUs extends Component {
@@ -15,4 +14,5 @@ class FindUs extends Component {
     );
   }
 }
+
 export default FindUs;

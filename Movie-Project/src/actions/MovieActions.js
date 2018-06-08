@@ -1,4 +1,4 @@
-import { FETCH_DATA, GET_MOVIES, MOVIE_DETAILS } from './types';
+import {FETCH_DATA,  GET_MOVIES,  MOVIE_DETAILS} from './types';
 
 export const fetchMovies = () => dispatch => {
   fetch('http://tv-v2.api-fetch.website/movies/10?sort=last%20added&order=-1&genre=action')
@@ -25,8 +25,6 @@ export const getMovies = (searchText) => dispatch => {
   } catch (error) {
     console.log("action error:" + error);
   }
-
-
 };
 
 export const getMovie = (id) => dispatch => {
@@ -38,6 +36,4 @@ export const getMovie = (id) => dispatch => {
         payload: movie
       })
     );
-
 }
-

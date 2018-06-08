@@ -1,9 +1,11 @@
 .carousel-indicators li {
-    display:none;
+    display: none;
 }
+
 .carousel.slide {
     position: absolute;
 }
+
 .row {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -13,62 +15,69 @@
     margin-right: -15px;
     margin-left: -15px;
 }
+
 .col-md-6 {
     -webkit-box-flex: 0;
     -ms-flex: 0 0 33.3333333333%;
     flex: 0 0 50%;
     max-width: 33.3333333333%;
-
 }
+
 .right-div {
     box-sizing: border-box;
     align-items: flex-end;
     -webkit-align-items: flex-end;
 }
+
 .Content {
-	margin: 0 auto;
-	width: 90%;
+    margin: 0 auto;
+    width: 90%;
 }
+
 .Footer {
-	margin: 0 auto;
-	text-align: center;
-	width: 90%;
+    margin: 0 auto;
+    text-align: center;
+    width: 90%;
 }
+
 .Header {
     text-align: center;
     background-color: #222;
     height: 160px;
     padding: 20px;
     color: white;
-  }
-  
-  .Logo img {
+}
+
+.Logo img {
     animation: App-logo-spin infinite 20s linear;
     height: 80px;
-  }
-  
-  @keyframes App-logo-spin {
-    from { transform: rotate(0deg); }
-    to { transform: rotate(360deg); }
-  }
-  
-  .Menu {
-      margin: 0;
-      padding: 0;
-      list-style: none;
-  }
-  
-  .Menu li {
-      display: inline-block;
-      padding-right: 10px;
-  }
-  
-  .Menu li a {
-      color: #CCC;
-      text-decoration: none;
-  }
-  
-  .Menu li a:hover {
-      color: #EEE;
-  }
-  
+}
+
+@keyframes App-logo-spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.Menu {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.Menu li {
+    display: inline-block;
+    padding-right: 10px;
+}
+
+.Menu li a {
+    color: #CCC;
+    text-decoration: none;
+}
+
+.Menu li a:hover {
+    color: #EEE;
+}

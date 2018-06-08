@@ -1,5 +1,4 @@
-export default [
-  {
+export default [{
     title: 'Home',
     url: '/'
   },
@@ -19,6 +18,5 @@ export default [
     title: 'Find Us',
     url: '/findUs'
   },
-  
-  
+
 ];
