@@ -18,7 +18,7 @@ export default class LogIn extends Component {
     this.setState({
       user: event.target.value
     });
-    event.preventDefault();
+    //event.preventDefault();
   }
 
   onPasswordChange(event) {
@@ -49,7 +49,7 @@ export default class LogIn extends Component {
                   <form>
                         <div className="col-xs-4 ">
                               <label className="sr-only">Username</label>
-                              <input type="text" id="inputUser" className="form-control" placeholder="Username" onChange={this.onUserChange} value={this.state.user} required />
+                              <input type="text" id="inputUser" name="inputUser" className="form-control" placeholder="Username" onChange={this.onUserChange} value={this.state.user} required />
                               <label className="sr-only">password</label>
                               <input type="password" id="inputPassword" name="inputPassword" className="form-control" placeholder="Password" onChange={this.onPasswordChange} value={this.state.password} required/>
                               <div className="checkbox mb-3">
