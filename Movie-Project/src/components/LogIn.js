@@ -1,69 +1,74 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom';
+import { withAuth } from '@okta/okta-react';
 import '../utils/css/style.css'
 
-export default class LogIn extends Component {
-
+ class LogIn extends Component {
   constructor(props){
     super(props);
-    this.state ={
-      user: '',
-      password:''
+    this.state = { authenticated: null };
+    this.login= this.login.bind(this);
+    this.logout= this.logout.bind(this);
+    this.checkAuthentication = this.checkAuthentication.bind(this)
+  }
+ 
+  async checkAuthentication()  {
+    const authenticated = await this.props.auth.isAuthenticated();
+    if (authenticated !== this.state.authenticated) {
+      this.setState({ authenticated });
     }
-    this.onClick = this.onClick.bind(this);
-    this.onUserChange = this.onUserChange.bind(this);
-    this.onPasswordChange = this.onPasswordChange.bind(this);
+  };
+
+  async componentDidMount() {
+    this.checkAuthentication();
   }
 
-  onUserChange(event) {
-    this.setState({
-      user: event.target.value
-    });
-    //event.preventDefault();
+  async componentDidUpdate() {
+    this.checkAuthentication();
   }
 
-  onPasswordChange(event) {
-    this.setState({
-      password:event.target.value
-    });
-    event.preventDefault();
-  }
+  async login() {
+    this.props.auth.login('/');
+  };
 
-   onClick (event) {
-    event.preventDefault();
-    let currentDiv = document.getElementById('welcome');
-    if(this.state.user !== '' && this.state.password !== '') {
-      currentDiv.innerHTML ='<h2> Welcome: '+this.state.user +'</h2>'
-    }
-    else {
-      window.alert('Please fill all fields')
-    }
-   }
+  async logout() {
+    this.props.auth.logout('/');
+  };
 
   render() {
+    if (this.state.authenticated === null) return null;
+
+    const mainContent = this.state.authenticated ? (
+      <div>
+        <p className="lead">
+          You have entered the staff portal,{' '}
+          <Link to="/staff">click here</Link>
+        </p>
+        <button className="btn btn-light btn-lg" onClick={this.logout}>
+          Logout
+        </button>
+      </div>
+    ) : (
+      <div>
+        <p className="lead">
+          If you are a staff member, please get your credentials from your
+          supervisor
+        </p>
+        <button className="btn btn-dark btn-lg" onClick={this.login}>
+          Login
+        </button>
+      </div>
+    );
 
     return (
-      <div>
-            <br/>
-            <br/>
-            <div className="form-singin ">
-                  <form>
-                        <div className="col-xs-4 ">
-                              <label className="sr-only">Username</label>
-                              <input type="text" id="inputUser" name="inputUser" className="form-control" placeholder="Username" onChange={this.onUserChange} value={this.state.user} required />
-                              <label className="sr-only">password</label>
-                              <input type="password" id="inputPassword" name="inputPassword" className="form-control" placeholder="Password" onChange={this.onPasswordChange} value={this.state.password} required/>
-                              <div className="checkbox mb-3">
-                                    <label>
-                                          <input type="checkbox" value="remember-me" /> Remember me
-                                    </label>
-                              </div>
-                              <button className="btn btn-lg btn-primary" type="submit" value="submit" onClick={this.onClick}>Sing In</button>
-                        </div>
-                  </form>
-            </div>
-            <div id="welcome" className="right-div">
-            </div>
+      <div className="jumbotron">
+        <h1 className="display-4">Acme Staff Portal</h1>
+        {mainContent}
       </div>
-    )
+    );
   }
+  
+    
+  
 }
+export default withAuth(LogIn);

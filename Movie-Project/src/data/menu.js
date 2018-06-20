@@ -18,5 +18,13 @@ export default [{
     title: 'Find Us',
     url: '/findUs'
   },
+  {
+    title: 'Staff',
+    url: '/staff'
+  },
+  {
+    title: '',
+    url: '/logInAccess'
+  },
 
 ];

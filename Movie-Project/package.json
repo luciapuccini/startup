@@ -21,6 +21,8 @@
     "eject": "react-scripts eject"
   },
   "devDependencies": {
+    "@okta/okta-react": "^1.0.2",
+    "@okta/okta-signin-widget": "^2.9.0",
     "@types/enzyme": "^3.1.10",
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.3",
